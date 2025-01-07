@@ -61,6 +61,7 @@ path=(
     $HOME/bin
     $HOME/.local/bin
     $HOME/dotnet
+    /home/linuxbrew/.linuxbrew/opt/dotnet@8/bin # Dotnet for dev container
     $SCRIPTS
     $HOME/.krew/bin
     $HOME/.rd/bin                   # Rancher Desktop
