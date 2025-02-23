@@ -74,3 +74,15 @@ vim.api.nvim_create_autocmd("filetype", {
   pattern = { "go" },
   command = 'lua require("cmp").setup { enabled = true }',
 })
+
+-- Disable auto formatting and markdown rendering on the Index
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "00.00 Index.md",
+  callback = function()
+    if vim.bo.filetype == "markdown" then
+      vim.cmd("RenderMarkdown disable")
+      vim.b.autoformat = false
+    end
+  end,
+})
