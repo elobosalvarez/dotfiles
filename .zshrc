@@ -125,6 +125,7 @@ alias icloud="cd \$ICLOUD"
 # 0
 
 alias 0='cd $HOME/0'
+alias zo='eval "$($SCRIPTS/0-cd)"'
 
 # Repos
 
