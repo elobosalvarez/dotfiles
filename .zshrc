@@ -122,6 +122,10 @@ alias cdblog="cd ~/websites/blog"
 alias c="clear"
 alias icloud="cd \$ICLOUD"
 
+# 0
+
+alias 0='cd $HOME/0'
+
 # Repos
 
 alias lab='cd $LAB'

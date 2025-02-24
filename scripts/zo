@@ -1,0 +1,12 @@
+#!/bin/bash
+# zo - Use fzf to select directories only
+
+# Use find to list directories, then pipe to fzf for interactive selection
+selected_dir=$(find . -type d -not -path '*/\.*' | fzf --height 40% --border --prompt="Select a directory: ")
+
+# If a directory is selected, print it (or you can cd into it, etc.)
+if [ -n "$selected_dir" ]; then
+  echo "$selected_dir"
+  # Uncomment the next line if you want to cd into the selected directory instead
+  cd "$selected_dir" || exit
+fi
